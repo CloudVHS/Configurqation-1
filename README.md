@@ -25,7 +25,9 @@ dhcp
 138 manet
 ```
 ### Решение.
-``` awk '{print $2, $1}' /etc/protocols | sort -nr | head -n 5 ```
+``` 
+awk '{print $2, $1}' /etc/protocols | sort -nr | head -n 5
+```
 ### Результат.
 ```
 localhost:~# awk '{print $2, $1}' /etc/protocols | sort -nr | head -n 5
