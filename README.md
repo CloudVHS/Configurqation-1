@@ -64,15 +64,6 @@ echo "| ${text} |"
 echo "+${line}+"
 
 ```
-```
-echo "+${line}+"
-echo "| ${text} |"
-echo "+${line}+"
-```
-` echo "+${line}+" ` выводит строку с символами ` + ` и ` - ` сверху баннера.
-` echo "| ${text} |" ` выводит текст с боковыми границами ` | `.
-` echo "+${line}+" ` выводит строку с символами ` + ` и ` - ` снизу баннера.
-
 ### Результат.
 ```
 (base) richardtrisvetov@MacBook-Air-3 ~ % /Users/richardtrisvetov/Desktop/config/prac1_3.sh "Hello from RTU MIREA"
