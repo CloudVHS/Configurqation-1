@@ -203,7 +203,7 @@ digraph express_dependencies {
 }
 ```
 ### Результат.
-Вот такой получился [граф](https://github.com/shylit/config/blob/main/prac2/images/expressgraph.png).
+Вот такой получился [граф](https://github.com/CloudVHS/Configurqation-1/blob/main/expressgraph.png).
 
 
 
