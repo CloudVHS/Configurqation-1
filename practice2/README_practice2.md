@@ -95,7 +95,7 @@ published 2 weeks ago by wesleytodd <wes@wesleytodd.com>
 pipdeptree --packages matplotlib --graph-output dot > matplotlib_deps.dot
 ```
 ### Результат.
-Вот такой получился [граф](https://github.com/CloudVHS/Configurqation-1/blob/main/expressgraph.png).
+Вот такой получился [граф](https://github.com/CloudVHS/Configurqation-1/blob/main/practice2/expressgraph.png).
 
 ## Задача №4
 Изучить основы программирования в ограничениях. Установить MiniZinc, разобраться с основами его синтаксиса и работы в IDE.
