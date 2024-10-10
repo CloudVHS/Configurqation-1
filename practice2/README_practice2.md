@@ -203,7 +203,7 @@ digraph express_dependencies {
 }
 ```
 ### Результат.
-Вот такой получился [граф].(https://github.com/CloudVHS/Configurqation-1/blob/main/practice2/matplotlibgraph.png).
+Вот такой получился [граф].(https://github.com/CloudVHS/Configurqation-1/blob/main/practice2/expressgraph.png).
 
 ## Задача №4
 Изучить основы программирования в ограничениях. Установить MiniZinc, разобраться с основами его синтаксиса и работы в IDE.
