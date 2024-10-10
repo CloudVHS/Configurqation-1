@@ -39,7 +39,7 @@ Required-by: seaborn
 
 ### Результат.
 ```
-(base) richardtrisvetov@MacBook-Air-4 ~ % npm show express
+npm show express
 
 express@4.21.0 | MIT | deps: 31 | versions: 279
 Fast, unopinionated, minimalist web framework
@@ -91,49 +91,8 @@ published 2 weeks ago by wesleytodd <wes@wesleytodd.com>
 
 ## Задача №3
 Сформировать graphviz-код и получить изображения зависимостей matplotlib и express.
-
-### Решение. Для matplotlib.
-Для полного списка зависимостей воспользуемся ` pipdeptree ` . Установим его и выведем список:
-
-``` pip install pipdeptree ``` - установка
-
-``` pipdeptree -p matplotlib ``` - вывод списка
-
-На выходе получим:
-
-```
-matplotlib==3.5.2
-├── cycler [required: >=0.10, installed: 0.11.0]
-├── fonttools [required: >=4.22.0, installed: 4.25.0]
-├── kiwisolver [required: >=1.0.1, installed: 1.4.2]
-├── numpy [required: >=1.17, installed: 1.21.5]
-├── packaging [required: >=20.0, installed: 24.1]
-├── Pillow [required: >=6.2.0, installed: 9.2.0]
-├── pyparsing [required: >=2.2.1, installed: 3.0.9]
-└── python-dateutil [required: >=2.7, installed: 2.8.2]
-    └── six [required: >=1.5, installed: 1.16.0]
-```
-
-Graphviz использует текстовое описание графа, называемое DOT, чтобы визуализировать зависимости в виде диаграмм. 
-Вот код для отображения зависимостей пакета.
-
-```
-
-digraph matplotlib_dependencies {
-    "matplotlib" -> "cycler";
-    "matplotlib" -> "fonttools";
-    "matplotlib" -> "kiwisolver";
-    "matplotlib" -> "numpy";
-    "matplotlib" -> "packaging";
-    "matplotlib" -> "Pillow";
-    "matplotlib" -> "pyparsing";
-    "matplotlib" -> "python-dateutil";
-
-    "python-dateutil" -> "six";
-}
-
-```
-
+```bash
+pipdeptree --packages matplotlib --graph-output dot > matplotlib_deps.dot
 ### Результат.
 Вот такой получился [граф](https://github.com/CloudVHS/Configurqation-1/blob/main/matplotlibgraph.png).
 
