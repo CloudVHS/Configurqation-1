@@ -93,78 +93,9 @@ published 2 weeks ago by wesleytodd <wes@wesleytodd.com>
 Сформировать graphviz-код и получить изображения зависимостей matplotlib и express.
 ```bash
 pipdeptree --packages matplotlib --graph-output dot > matplotlib_deps.dot
-### Результат.
-Вот такой получился [граф](https://github.com/CloudVHS/Configurqation-1/blob/main/matplotlibgraph.png).
-
-### Решение. Для express.
-Аналогично, для express.
-
-``` npm show express dependencies ``` - для вывода зависимостей
-
-На выходе получим:
-
-```
-(base) richardtrisvetov@MacBook-Air-4 my-express-app % npm show express dependencies
-
-{
-  qs: '6.13.0',
-  depd: '2.0.0',
-  etag: '~1.8.1',
-  send: '0.19.0',
-  vary: '~1.1.2',
-  debug: '2.6.9',
-  fresh: '0.5.2',
-  cookie: '0.6.0',
-  accepts: '~1.3.8',
-  methods: '~1.1.2',
-  'type-is': '~1.6.18',
-  parseurl: '~1.3.3',
-  statuses: '2.0.1',
-  encodeurl: '~2.0.0',
-  'proxy-addr': '~2.0.7',
-  'body-parser': '1.20.3',
-  'escape-html': '~1.0.3',
-  'http-errors': '2.0.0',
-  'on-finished': '2.4.1',
-  'safe-buffer': '5.2.1',
-  'utils-merge': '1.0.1',
-  'content-type': '~1.0.4',
-  finalhandler: '1.3.1',
-  'range-parser': '~1.2.1',
-  'serve-static': '1.16.2',
-  'array-flatten': '1.1.1',
-  'path-to-regexp': '0.1.10',
-  setprototypeof: '1.2.0',
-  'cookie-signature': '1.0.6',
-  'merge-descriptors': '1.0.3',
-  'content-disposition': '0.5.4'
-}
-```
-
-Graphviz использует текстовое описание графа, называемое DOT, чтобы визуализировать зависимости в виде диаграмм. 
-Вот код для отображения зависимостей пакета.
-
-```
-
-digraph express_dependencies {
-    "express" -> "qs: 6.13.0";
-    "express" -> "depd: 2.0.0";
-    "express" -> "etag: ~1.8.1";
-    "express" -> "send: 0.19.0";
-    "express" -> "vary: ~1.1.2";
-    "express" -> "debug: 2.6.9";
-    "express" -> "fresh: 0.5.2";
-    "express" -> "cookie: 0.6.0";
-    "express" -> "accepts: ~1.3.8";
-    "express" -> "methods: ~1.1.2";
-    "express" -> "type-is: ~1.6.18";
-    "express" -> "parseurl: ~1.3.3";
-}
 ```
 ### Результат.
 Вот такой получился [граф](https://github.com/CloudVHS/Configurqation-1/blob/main/expressgraph.png).
-
-
 
 ## Задача №4
 Изучить основы программирования в ограничениях. Установить MiniZinc, разобраться с основами его синтаксиса и работы в IDE.
