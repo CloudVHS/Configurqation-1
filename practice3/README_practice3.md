@@ -160,17 +160,15 @@ in  { groups =
 import random
 
 def parse_bnf(bnf_grammar):
-    """Разбирает BNF-грамматику и создает словарь правил."""
     rules = {}
     for line in bnf_grammar.splitlines():
-        if not line.strip():  # Пропускаем пустые строки
+        if not line.strip():  
             continue
         left, right = line.split("=")
         rules[left.strip()] = [x.strip() for x in right.split("|")]
     return rules
 
 def generate_phrase(rules, start_symbol):
-    """Генерирует фразу из BNF-грамматики."""
     phrase = [start_symbol]
     while True:
         for i, word in enumerate(phrase):
@@ -178,7 +176,7 @@ def generate_phrase(rules, start_symbol):
                 replacement = random.choice(rules[word])
                 phrase[i] = replacement
                 break
-        else:  # Если не найдено ни одного слова для замены
+        else:  
             break
     return ''.join(phrase)
 
