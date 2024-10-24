@@ -20,6 +20,7 @@
 ```
 
 ### Результат.
+```
 {
   "groups": [
     "ИКБО-1-20",
@@ -69,11 +70,33 @@
     }
   ],
   "subject": "Конфигурационное управление"
+```
 }
 ### Задача 2
 Реализовать на Dhall приведенный ниже пример в формате JSON. Использовать в реализации свойство программируемости и принцип DRY.\
 
 ### Решение.
+```
+let Prelude = https://prelude.dhall-lang.org/v20.2.0/package.dhall
+let generateGroup = λ(i : Natural) → "ИКБО-" ++ Prelude.Natural.show i ++ "-20"
+
+in  { groups =
+      [ generateGroup 1, generateGroup 2, generateGroup 3, generateGroup 4
+      , generateGroup 5, generateGroup 6, generateGroup 7, generateGroup 8
+      , generateGroup 9, generateGroup 10, generateGroup 11, generateGroup 12
+      , generateGroup 13, generateGroup 14, generateGroup 15, generateGroup 16
+      , generateGroup 17, generateGroup 18, generateGroup 19, generateGroup 20
+      , generateGroup 21, generateGroup 22, generateGroup 23, generateGroup 24
+      ]
+    , students =
+      [ { age = 19, group = "ИКБО-4-20", name = "Иванов И.И." }
+      , { age = 18, group = "ИКБО-5-20", name = "Петров П.П." }
+      , { age = 18, group = "ИКБО-5-20", name = "Сидоров С.С." }
+      , { age = 20, group = "ИКБО-6-20", name = "Кузнецов К.К." } -- новый студент
+      ]
+    , subject = "Конфигурационное управление"
+ }
+```
 ```
 {
   "groups": [
@@ -123,29 +146,6 @@
   "subject": "Конфигурационное управление"
 } 
 ```
-
-```
-let Prelude = https://prelude.dhall-lang.org/v20.2.0/package.dhall
-let generateGroup = λ(i : Natural) → "ИКБО-" ++ Prelude.Natural.show i ++ "-20"
-
-in  { groups =
-      [ generateGroup 1, generateGroup 2, generateGroup 3, generateGroup 4
-      , generateGroup 5, generateGroup 6, generateGroup 7, generateGroup 8
-      , generateGroup 9, generateGroup 10, generateGroup 11, generateGroup 12
-      , generateGroup 13, generateGroup 14, generateGroup 15, generateGroup 16
-      , generateGroup 17, generateGroup 18, generateGroup 19, generateGroup 20
-      , generateGroup 21, generateGroup 22, generateGroup 23, generateGroup 24
-      ]
-    , students =
-      [ { age = 19, group = "ИКБО-4-20", name = "Иванов И.И." }
-      , { age = 18, group = "ИКБО-5-20", name = "Петров П.П." }
-      , { age = 18, group = "ИКБО-5-20", name = "Сидоров С.С." }
-      , { age = 20, group = "ИКБО-6-20", name = "Кузнецов К.К." } -- новый студент
-      ]
-    , subject = "Конфигурационное управление"
- }
-```
-
 ### Задача 3
 Язык нулей и единиц.
 
