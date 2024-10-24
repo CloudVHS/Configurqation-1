@@ -97,6 +97,7 @@ in  { groups =
     , subject = "Конфигурационное управление"
  }
 ```
+### Результат.
 ```
 {
   "groups": [
@@ -148,23 +149,61 @@ in  { groups =
 ```
 ### Задача 3
 Язык нулей и единиц.
-
-### Решение.
 10
 100
 11
 101101
 000
 
-```bash
+### Решение.
+```
+import random
+
+def parse_bnf(bnf_grammar):
+    """Разбирает BNF-грамматику и создает словарь правил."""
+    rules = {}
+    for line in bnf_grammar.splitlines():
+        if not line.strip():  # Пропускаем пустые строки
+            continue
+        left, right = line.split("=")
+        rules[left.strip()] = [x.strip() for x in right.split("|")]
+    return rules
+
+def generate_phrase(rules, start_symbol):
+    """Генерирует фразу из BNF-грамматики."""
+    phrase = [start_symbol]
+    while True:
+        for i, word in enumerate(phrase):
+            if word in rules:
+                replacement = random.choice(rules[word])
+                phrase[i] = replacement
+                break
+        else:  # Если не найдено ни одного слова для замены
+            break
+    return ''.join(phrase)
+
 BNF = '''
 E = 10 | 100 | 11 | 101101 | 000
 '''
 
-for i in range(10):
-    print(generate_phrase(parse_bnf(BNF), 'E'))
-```
+rules = parse_bnf(BNF)
 
+for i in range(10):
+    print(generate_phrase(rules, 'E'))
+```
+### Результат.
+```
+100
+10
+11
+000
+101101
+10
+10
+10
+11
+10
+```
 ### Задача 4
 Язык правильно расставленных скобок двух видов.
 
@@ -175,7 +214,7 @@ for i in range(10):
 ()
 {}
 
-```bash
+```
 BNF = '''
 E = "()" | "{}" | E E | "(" E ")" | "{" E "}"
 '''
@@ -183,14 +222,39 @@ E = "()" | "{}" | E E | "(" E ")" | "{" E "}"
 for i in range(10):
     print(generate_phrase(parse_bnf(BNF), 'E'))
 ```
-
+### Результат.
+```
+()
+{}
+()()
+{{}}
+()()()
+{()}
+{{()()()()()()}}
+{{}}
+{()()}
+{{()()()()()()}}
+```
 Задача 5
 Язык выражений алгебры логики.
-```bash
+```
 BNF = '''
 E = "~" E | E "&" E | E "|" E | "(" E ")" | "x" | "y"
 '''
 
 for i in range(10):
     print(generate_phrase(parse_bnf(BNF), 'E'))
+```
+### Результат.
+```
+x
+~y
+x&y
+(x|y)
+x&(~y)
+~(x&y)
+y|x
+x&x
+(~y)&x
+(x|(y&~x))
 ```
