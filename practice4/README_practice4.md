@@ -22,7 +22,7 @@ git checkout master
 git merge second
 git checkout in
 ```
-###Результ: 
+### Результ: 
 https://github.com/CloudVHS/Configurqation-1/blob/main/image.png
 
 ## Задача 2
