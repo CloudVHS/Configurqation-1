@@ -1,6 +1,6 @@
-### Задача 1
+## Задача 1
 На сайте https://onlywei.github.io/explain-git-with-d3 или http://git-school.github.io/visualizing-git/ (цвета могут отличаться, есть команды undo/redo) с помощью команд эмулятора git получить следующее состояние проекта (сливаем master с first, перебазируем second на master): см. картинку ниже. Прислать свою картинку.
-![alt text](image.png)
+![alt text]
 
 ```bash
 git commit
@@ -22,9 +22,10 @@ git checkout master
 git merge second
 git checkout in
 ```
+###Результ: 
+https://github.com/CloudVHS/Configurqation-1/blob/main/image.png
 
-
-### Задача 2
+## Задача 2
 ```bash
 # Инициализация локального репозитория
 git init my_project
@@ -54,7 +55,7 @@ Date:   Thu Oct 31 23:13:54 2024 +0300
     new: добавлен файл prog.py
 ```
 
-### Задача 4
+## Задача 4
 Написать программу на Питоне (или другом ЯП), которая выводит список содержимого всех объектов репозитория. Воспользоваться командой "git cat-file -p". Идеальное решение – не использовать иных сторонних команд и библиотек для работы с git.
 
 ```bash
