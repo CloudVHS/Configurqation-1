@@ -1,0 +1,92 @@
+[
+    {
+        "user": "Lightning McQueen",
+        "command": "ls",
+        "args": []
+    },
+    {
+        "user": "Lightning McQueen",
+        "command": "ls",
+        "args": [
+            "virtual_fs"
+        ]
+    },
+    {
+        "user": "Lightning McQueen",
+        "command": "ls",
+        "args": [
+            "subdir"
+        ]
+    },
+    {
+        "user": "Lightning McQueen",
+        "command": "ls",
+        "args": [
+            "virtual_fs/subdir"
+        ]
+    },
+    {
+        "user": "Lightning McQueen",
+        "command": "cd",
+        "args": []
+    },
+    {
+        "user": "Lightning McQueen",
+        "command": "mkdir",
+        "args": [
+            "new_dir"
+        ]
+    },
+    {
+        "user": "Lightning McQueen",
+        "command": "mkdeir",
+        "args": [
+            "virtual_fs/new_dir"
+        ]
+    },
+    {
+        "user": "Lightning McQueen",
+        "command": "mkdir",
+        "args": [
+            "virtual_fs/new_dir"
+        ]
+    },
+    {
+        "user": "Lightning McQueen",
+        "command": "ls",
+        "args": [
+            "virtual_fs"
+        ]
+    },
+    {
+        "user": "Lightning McQueen",
+        "command": "mkdir",
+        "args": [
+            "new_dir"
+        ]
+    },
+    {
+        "user": "Lightning McQueen",
+        "command": "mkdeir",
+        "args": [
+            "virtual_fs/new_dir"
+        ]
+    },
+    {
+        "user": "Lightning McQueen",
+        "command": "mkdir",
+        "args": [
+            "virtual_fs/new_dir"
+        ]
+    },
+    {
+        "user": "Lightning McQueen",
+        "command": "clear",
+        "args": []
+    },
+    {
+        "user": "Lightning McQueen",
+        "command": "exit",
+        "args": []
+    }
+]

@@ -1,0 +1,3 @@
+user = "Lightning McQueen"
+vfs_path = "/Users/savelijgorkov/PycharmProjects/shell_emulator/virtual_fs.zip"
+log_path = "/Users/savelijgorkov/PycharmProjects/shell_emulator/emulator.log"
