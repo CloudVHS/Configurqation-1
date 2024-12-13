@@ -31,7 +31,7 @@ python tests.py
 
 ## 4. Пример использования:
 
-![image]()
+![image](https://github.com/CloudVHS/Configurqation-1/blob/main/hometask1/test_emulator.jpg)
 
 ## 5. Результаты прогона тестов:
 
