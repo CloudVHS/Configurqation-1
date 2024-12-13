@@ -35,4 +35,4 @@ python tests.py
 
 ## 5. Результаты прогона тестов:
 
-![image]()
+![image](https://github.com/CloudVHS/Configurqation-1/blob/main/hometask1/test_photo.png)
