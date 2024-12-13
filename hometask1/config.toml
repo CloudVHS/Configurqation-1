@@ -1,0 +1,3 @@
+username = "test_user"
+fs_path = "iso.zip"
+log_path = "session_log.json"
