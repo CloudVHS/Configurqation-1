@@ -1,0 +1,12 @@
+@startuml
+"iptables" --> "libc6"
+"iptables" --> "libxtables12"
+"iptables" --> "libnfnetlink0"
+"iptables" --> "libip6tc2"
+"iptables" --> "netbase"
+"iptables" --> "libc6-udeb"
+"iptables" --> "libmnl0"
+"iptables" --> "libnetfilter-conntrack3"
+"iptables" --> "libnftnl11"
+"iptables" --> "libip4tc2"
+@enduml
