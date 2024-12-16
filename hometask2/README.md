@@ -23,3 +23,15 @@
     python ./tests.py
    ```
 ---
+
+## 2. Вывод программы
+
+### После генерации граф может выглядеть так:
+
+![output](https://github.com/CloudVHS/Configurqation-1/blob/main/hometask2/iptables_dependencies.png)
+
+### Результаты прогона тестов:
+
+![image]()
+
+---
