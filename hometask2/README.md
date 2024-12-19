@@ -3,7 +3,7 @@
 ### Установка необходимых библиотек:
 
    ```bash
-   ppip install -r requirements.txt (requests, beautifulsoup4)
+   pip install -r requirements.txt (requests, beautifulsoup4)
    ```
 
 ### Запуск проекта
