@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<configuration>
+  <table>
+    <pair name="weight">$GRAVITY$ * $mass$</pair>
+    <pair name="status">'active'</pair>
+  </table>
+  <array>
+    <value>'apple'</value>
+    <value>'banana'</value>
+    <value>'cherry'</value>
+  </array>
+  <table>
+    <pair name="volume">4/3 * $PI$ * $RADIUS$^3</pair>
+  </table>
+</configuration>

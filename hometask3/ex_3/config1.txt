@@ -1,0 +1,6 @@
+let GRAVITY = 9.81
+let mass = 5
+table([ weight = $GRAVITY$ * $mass$, status = 'active' ])
+({ 'apple', 'banana', 'cherry' })
+let RADIUS = 6
+table([ volume = 4/3 * $PI$ * $RADIUS$^3 ])
